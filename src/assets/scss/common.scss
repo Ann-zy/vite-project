@@ -1,0 +1,275 @@
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.border-bottom {
+  position: relative;
+}
+
+.border-bottom:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8e8e8;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+
+.border-top {
+  position: relative;
+}
+
+.border-top:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8e8e8;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+
+.text-hidden {
+  /*强制文字在一行文本框内*/
+  white-space: nowrap;
+  /*溢出部分文字隐藏*/
+  overflow: hidden;
+  /*溢出部分省略号处理*/
+  text-overflow: ellipsis;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-normal {
+  position: fixed;
+  left: 40px;
+  right: 40px;
+  bottom: 93px;
+  width: 670px;
+  height: 100px;
+  background: linear-gradient(90deg, #24c0ce 0%, #2fb5d9 100%);
+  border-radius: 20px;
+  font-size: 36px;
+  font-family: Source Han Sans CN;
+  font-weight: 550;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurant-van-style{
+  .van-cell {
+    padding: 34px 40px;
+    &::after {
+      right:0px;
+      left: 0px;
+      border-bottom: 1px solid #F2F5F6;
+    }
+  }
+  [class*=van-hairline]::after{
+    border: none;
+    border-bottom: 1px solid #F2F5F6;
+  }
+   .van-cell__title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+    font-weight: 550;
+    color: #000D39;
+  }
+   .van-field__control {
+    font-size: 30px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #050e2c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .extra{
+    font-size: 30px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #050E2C;
+    margin-left: 10px;
+  }
+  .iconfont {
+    width: 10px;
+    height: 17px;
+  }
+  .img-icon {
+    height: 40px;
+  }
+  .sort-icon{
+    width: 32px;
+    height: 28px;
+  }
+  .chosen {
+    background-color: #fff !important;
+    opacity: 1 !important;
+  }
+}
+.index-bar-wrapper {
+  margin-left: 168px;
+  .van-index-anchor{
+    
+    padding: 30px 40px;
+    @include flex-row-between;
+    .left{
+      font-size: 32px;
+      font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+      font-weight: 550;
+      color: #000D39;
+     &::before{
+      height: 100%;
+      vertical-align: top;
+      content: ".";
+      display: inline-block;
+      margin-top: -10px;
+     }
+    }
+    .right{
+      font-size: 28px;
+      font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+      font-weight: 500;
+      color: #2bb9d5;
+    }
+  }
+   .van-index-bar {
+     &__sidebar{
+      width: 168px;
+      height:100vh;
+      background-color: #f4f4f5;
+      position: absolute;
+      left: 0;
+     }
+     &__index{
+       text-align: left;
+       padding: 30px 20px;
+       font-size: 32px;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #9D9D9D;
+      border-left: 5px solid transparent;
+      &--active{
+        background-color: #fff;
+        color: #2BB9D5;
+        border-left: 5px solid #2BB9D5;
+      }
+     }  
+  }
+}
+
+.confirm-dialog {
+  width: 630px;
+  border-radius: 20px;
+
+  .van-dialog__header {
+    padding-top: 90px;
+    padding-bottom: 80px;
+    font-size: 42px;
+    font-weight: 550;
+    color: #141938;
+  }
+
+  .van-dialog__message {
+    font-size: 34px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 48px;
+  }
+
+  .van-dialog__cancel {
+    font-size: 36px;
+    font-family: Noto Sans S Chinese;
+    font-weight: 400;
+    color: #a4aeb7;
+  }
+
+  .van-dialog__confirm {
+    font-size: 36px;
+    font-family: Noto Sans S Chinese;
+    font-weight: 550;
+    color: #2bb9d5;
+  }
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.fs-dialog {
+  width: 630px;
+  border-radius: 20px;
+
+  .van-dialog__message {
+    padding: 70px 50px;
+    color: #000;
+    font-weight: 400;
+    font-size: 34px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    line-height: 48px;
+  }
+  
+  .van-dialog__confirm {
+    height: auto;
+    font-size: 36px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 550;
+    color: #2fb6d9;
+    padding: 30px 0;
+  
+    &:active {
+      color: #2fb6d9;
+    }
+  }
+
+  .van-dialog__cancel {
+    height: auto;
+    font-size: 36px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    padding: 30px 0;
+  }
+}
